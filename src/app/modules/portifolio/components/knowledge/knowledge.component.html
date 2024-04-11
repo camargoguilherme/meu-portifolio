@@ -1,0 +1,16 @@
+<div class="container">
+  <h2>Conhecimentos</h2>
+  <ul>
+    @for(knowledge of knowledges(); track knowledge){
+    <li [matTooltip]="knowledge.description">
+      <img
+        src="assets/icons/knowledge/{{ knowledge.image }}"
+        [alt]="knowledge.detail"
+        loading="lazy"
+        width="22px"
+        height="24px"
+      />
+    </li>
+    }
+  </ul>
+</div>

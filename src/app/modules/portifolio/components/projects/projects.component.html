@@ -1,0 +1,21 @@
+<div class="container">
+  <h2>Projetos Desenvolvidos</h2>
+  <ul>
+    @for(project of projects();track project){
+    <li>
+      <button (click)="openDialog(project)">
+        <p>
+          {{ project.title }}
+        </p>
+        <img
+          src="assets/images/projects/{{ project.image }}"
+          [alt]="project.detail"
+          [attr.width]="project.width"
+          [attr.height]="project.height"
+          loading="lazy"
+        />
+      </button>
+    </li>
+    }
+  </ul>
+</div>

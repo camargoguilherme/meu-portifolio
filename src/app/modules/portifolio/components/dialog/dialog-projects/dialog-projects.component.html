@@ -1,0 +1,23 @@
+<header>
+  <h2 mat-dialog-title>{{ project()?.title }}</h2>
+  <button (click)="closeModal()">
+    <img
+      src="assets/icons/dialog/close.svg"
+      alt="Botão para fechar o dialog"
+      width="20px"
+      height="20px"
+    />
+  </button>
+</header>
+
+<mat-dialog-content>
+  <h3>Descrição</h3>
+  <article [innerHTML]="project()?.description"></article>
+  <nav>
+    @for(link of project()?.links; track link){
+    <a [href]="link.href" target="_blank" class="btn btn-primary">
+      {{ link.name }}
+    </a>
+    }
+  </nav>
+</mat-dialog-content>

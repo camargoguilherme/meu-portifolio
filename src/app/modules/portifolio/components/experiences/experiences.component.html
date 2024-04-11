@@ -1,0 +1,14 @@
+<div class="container">
+  <h2>Útilmas Experiências</h2>
+  @for(experience of experiences(); track experience;) {
+  <details>
+    <summary>
+      <p>
+        <strong>{{ experience.role }}</strong>
+        {{ experience.period }}
+      </p>
+    </summary>
+    <article [innerHTML]="experience.details"></article>
+  </details>
+  }
+</div>
